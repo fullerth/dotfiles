@@ -26,6 +26,9 @@ set splitright
 set foldmethod=indent
 set foldlevel=99
 
+"Add Apprentice Theme to the runtimepath
+set runtimepath+=~/.vim/bundle/Apprentice
+
 "Watch For Changes set at bottom of file
 
 " If you are using a console version of Vim, or dealing
@@ -191,6 +194,6 @@ function! WatchForChanges(bufname, ...)
   let @"=reg_saved
 endfunction
 
-WatchForChanges
+WatchForChanges 
 
 

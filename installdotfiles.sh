@@ -11,7 +11,7 @@
 dir=~/Projects/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="bashrc vimrc"    
+files="bashrc vimrc vim"    
 ##########
 
 # create dotfiles_old in homedir
