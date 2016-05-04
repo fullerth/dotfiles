@@ -12,6 +12,8 @@ dir=~/Projects/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 files="bashrc vimrc vim"    
+# list of files/folders to symlink in ~/.config
+config_files="xfce4"
 ##########
 
 # create dotfiles_old in homedir
@@ -30,4 +32,12 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
+done
+
+# move any existing dotfiles in ~/.config to dotfiles_old directory, then create symlinks
+for file in $config_files; do
+    echo "Moving any existing dotfiles from ~/.config to $olddir/.config"
+    mv ~/.config/$file ~/dotfiles_old/.config/
+    echo "Creating symlink to $file in ~/.config directory."
+    ln -s $dir/$file ~/.config/$file
 done
