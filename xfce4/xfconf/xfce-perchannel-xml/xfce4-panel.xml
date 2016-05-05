@@ -14,6 +14,7 @@
         <value type="int" value="2"/>
         <value type="int" value="12"/>
         <value type="int" value="1"/>
+        <value type="int" value="9"/>
         <value type="int" value="3"/>
         <value type="int" value="15"/>
         <value type="int" value="4"/>
@@ -54,12 +55,6 @@
     </property>
     <property name="plugin-7" type="string" value="whiskermenu"/>
     <property name="plugin-8" type="string" value="power-manager-plugin"/>
-    <property name="plugin-9" type="string" value="mixer">
-      <property name="sound-card" type="string" value="HDAIntelPCHAlsamixer"/>
-      <property name="track" type="string" value="Master"/>
-      <property name="command" type="string" value="xfce4-mixer"/>
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-    </property>
     <property name="plugin-11" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
@@ -76,6 +71,11 @@
     <property name="plugin-12" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14449738943.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-9" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14624307801.desktop"/>
       </property>
     </property>
   </property>
