@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Slither
+Comment=Slither
+Exec=chromium-browser --app=http://slither.io --start-fullscreen
+Icon=apple-red
+Path=
+Terminal=true
+StartupNotify=false
