@@ -115,3 +115,4 @@ fi
 export PATH=$PATH:/srv/crosstool-ng/bin:/usr/local/xtools/arm-beagle-linux-gnueabi/bin
 
 export TERM=xterm-256color
+export EDITOR=vim
