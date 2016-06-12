@@ -10,6 +10,7 @@ for dir in $extra_dirs; do
     if [[ -d "${dir}" ]] ; then
         echo "Directory Exists"
         if [[ -L "${dir}" ]] ; then
+            nop
         else
             echo "Removing ${dir}"
             rmdir "${dir}"
@@ -21,4 +22,4 @@ echo "Installing crosstool-ng prerequisites"
 sudo apt-get install gcc gperf bison flex texinfo help2man gawk libtool-bin automake libncurses5-dev g++
 
 echo "Installing general tools"
-sudo apt-get install cmake exuberant-ctags git nmap
+sudo apt-get install cmake exuberant-ctags git nmap weechat

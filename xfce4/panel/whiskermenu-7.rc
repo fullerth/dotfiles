@@ -1,5 +1,5 @@
-favorites=exo-web-browser.desktop,exo-file-manager.desktop,abiword.desktop,gnumeric.desktop,hexchat.desktop,pidgin.desktop,deadbeef.desktop,exo-terminal-emulator.desktop
-recent=keepass2.desktop,firefox.desktop,wine-notepad.desktop,simple-scan.desktop,xscreensaver-properties.desktop,xfce4-power-manager-settings.desktop,synaptic.desktop,gdebi.desktop,system-config-printer.desktop,xfce-settings-manager.desktop
+favorites=exo-web-browser.desktop,exo-file-manager.desktop,hexchat.desktop,pidgin.desktop,deadbeef.desktop,exo-terminal-emulator.desktop
+recent=xfce-ui-settings.desktop,simple-scan.desktop,xscreensaver-properties.desktop,xfce4-power-manager-settings.desktop,synaptic.desktop,gdebi.desktop,system-config-printer.desktop,xfce-settings-manager.desktop
 button-title=Applications Menu
 button-icon=xubuntu-logo-menu
 button-single-row=false
@@ -11,6 +11,7 @@ item-icon-size=2
 hover-switch-category=false
 category-icon-size=1
 load-hierarchy=true
+recent-items-max=10
 favorites-in-recent=true
 display-recent-default=false
 position-search-alternate=true
@@ -18,6 +19,7 @@ position-commands-alternate=false
 position-categories-alternate=false
 menu-width=364
 menu-height=438
+menu-opacity=100
 command-settings=xfce4-settings-manager
 show-command-settings=true
 command-lockscreen=xflock4
@@ -28,6 +30,8 @@ command-logout=xfce4-session-logout
 show-command-logout=true
 command-menueditor=menulibre
 show-command-menueditor=true
+command-profile=mugshot
+show-command-profile=true
 search-actions=4
 
 [action0]
