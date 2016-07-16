@@ -22,4 +22,4 @@ echo "Installing crosstool-ng prerequisites"
 sudo apt-get install gcc gperf bison flex texinfo help2man gawk libtool-bin automake libncurses5-dev g++
 
 echo "Installing general tools"
-sudo apt-get install cmake exuberant-ctags git nmap weechat
+sudo apt-get install cmake exuberant-ctags git nmap weechat vim
