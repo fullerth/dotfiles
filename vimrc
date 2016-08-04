@@ -11,6 +11,8 @@ set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set hlsearch
+set incsearch
 
 "Map ctrl+dir keys to move between splits
 nnoremap <C-J> <C-W><C-J>
