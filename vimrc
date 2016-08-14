@@ -13,6 +13,7 @@ set shiftwidth=4
 set expandtab
 set hlsearch
 set incsearch
+set laststatus=2 "Set the statusbar so it always displays
 
 "Map ctrl+dir keys to move between splits
 nnoremap <C-J> <C-W><C-J>
