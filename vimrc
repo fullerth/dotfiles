@@ -21,6 +21,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Map <CR> to clear search highlighting
+nnoremap <CR> :noh<CR><CR>
+
 "Set splits to the right and below
 set splitbelow
 set splitright
