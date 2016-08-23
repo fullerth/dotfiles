@@ -35,6 +35,10 @@ set foldlevel=99
 "Add Apprentice Theme to the runtimepath
 set runtimepath+=~/.vim/bundle/Apprentice
 
+"Add vim-markdown-preview to the runtimepath
+let vim_markdown_preview_github=1
+set runtimepath+=~/.vim/bundle/vim-markdown-preview
+
 "Watch For Changes set at bottom of file
 
 " If you are using a console version of Vim, or dealing

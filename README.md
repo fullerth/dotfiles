@@ -1,4 +1,8 @@
 # dotfiles
 
-Submodules Apprentice colour scheme for vim. Be sure to run 
-`git submodule update --init` to get the submodule
+# Submodules 
+Run `git submodule update --init` to get the submodules:
+
+1. Apprentice colour scheme for vim. 
+1. vim-markdown-preview
+
