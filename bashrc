@@ -113,6 +113,8 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=$PATH:/srv/crosstool-ng/bin:/usr/local/xtools/arm-beagle-linux-gnueabi/bin
-
-export TERM=xterm-256color
+if [ "$TERM" == "xterm" ]; then
+    # No it isn't, it's gnome-terminal
+    export TERM=xterm-256color
+fi
 export EDITOR=vim
