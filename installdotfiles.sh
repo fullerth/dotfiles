@@ -11,7 +11,7 @@
 dir=~/Projects/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="bashrc vimrc vim"    
+files="bashrc vimrc vim tmux.conf"    
 # list of files/folders to symlink in ~/.config
 config_files="xfce4"
 ##########
