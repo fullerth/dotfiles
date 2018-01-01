@@ -8,12 +8,12 @@
 
 ########## Variables
 
-dir=~/Projects/dotfiles                    # dotfiles directory
+dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="bashrc bash_aliases vimrc vim tmux.conf"    
+files="vimrc vim tmux.conf"    
 # list of files/folders to symlink in ~/.config
-config_files="xfce4"
+config_files="xfce4 i3"
 ##########
 
 # create dotfiles_old in homedir
