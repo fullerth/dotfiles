@@ -1,9 +1,0 @@
-[submodule "vim/bundle/Apprentice"]
-	path = vim/bundle/Apprentice
-	url = https://github.com/romainl/Apprentice.git
-[submodule "vim/bundle/vim-markdown-preview"]
-	path = vim/bundle/vim-markdown-preview
-	url = git@github.com:JamshedVesuna/vim-markdown-preview.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
