@@ -2,10 +2,9 @@
 syntax on
 filetype plugin indent on
 
-inoremap jk <ESC>
-
 "Editor Display Setup
-colorscheme evening
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-solarized-dark
 set nu
 set colorcolumn=80
 set tabstop=4
@@ -33,18 +32,13 @@ set splitright
 set foldmethod=indent
 set foldlevel=99
 
-"Macro for clearing data out of a WatchTape Json video data file
-let @j = '5f"ldt"3f"ldt"j0'
-
 "Setup syntax for arduino .ino files
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
-"Add Apprentice Theme to the runtimepath
-set runtimepath+=~/.vim/bundle/Apprentice
+"Remove toolbar, menubar and tabbar from gvim
+set guioptions-=m
+set guioptions-=T 
+set guioptions-=e
 
-"Add vim-markdown-preview to the runtimepath
-let vim_markdown_preview_github=1
-set runtimepath+=~/.vim/bundle/vim-markdown-preview
-set runtimepath+=~/.vim/bundle/nerdcommenter
+set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
 
-colorscheme apprentice
