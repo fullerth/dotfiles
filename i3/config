@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Set background
-exec --no-startup-id xsetroot -solid "#002244"
+exec --no-startup-id xsetroot -solid "#241344"
 
 # change focus
 bindsym $mod+h focus left

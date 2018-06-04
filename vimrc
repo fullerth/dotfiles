@@ -16,6 +16,9 @@ set incsearch
 set laststatus=2 "Set the statusbar so it always displays
 set backspace=2 "Sane backspace behaviour
 
+"Add a manual command to re-run ctags
+nnoremap <f5> :!ctags -R<CR>
+
 "Map ctrl+dir keys to move between splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -33,18 +36,7 @@ set splitright
 set foldmethod=indent
 set foldlevel=99
 
-"Macro for clearing data out of a WatchTape Json video data file
-let @j = '5f"ldt"3f"ldt"j0'
-
 "Setup syntax for arduino .ino files
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
-
-"Add Apprentice Theme to the runtimepath
-set runtimepath+=~/.vim/bundle/Apprentice
-
-"Add vim-markdown-preview to the runtimepath
-let vim_markdown_preview_github=1
-set runtimepath+=~/.vim/bundle/vim-markdown-preview
-set runtimepath+=~/.vim/bundle/nerdcommenter
 
 colorscheme apprentice

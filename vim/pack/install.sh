@@ -45,7 +45,8 @@ set_group tpope
 # Closes #123 remarks slightly easier than copying and pasting from the
 # browser.
 #package https://github.com/tpope/vim-rhubarb.git &
-package https://github.com/tpope/vim-fugitive.git &
+package git@github.com:tpope/vim-fugitive.git &
+package git@github.com:tpope/vim-unimpaired.git &
 #package https://github.com/tpope/vim-surround.git &
 #package https://github.com/tpope/vim-ragtag.git &
 #package https://github.com/tpope/vim-abolish.git &
@@ -61,7 +62,7 @@ wait
 (
 set_group syntax
 # package https://github.com/tmux-plugins/vim-tmux.git &
-package https://github.com/romainl/Apprentice.git
+package git@github.com:romainl/Apprentice.git
 wait
 ) &
 
