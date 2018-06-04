@@ -2,10 +2,8 @@
 syntax on
 filetype plugin indent on
 
-inoremap jk <ESC>
-
 "Editor Display Setup
-colorscheme evening
+let base16colorspace=256  " Access colors present in 256 colorspace
 set nu
 set colorcolumn=80
 set tabstop=4
@@ -40,3 +38,10 @@ set foldlevel=99
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
 colorscheme apprentice
+
+"Remove toolbar, menubar and tabbar from gvim
+set guioptions-=m
+set guioptions-=T 
+set guioptions-=e
+
+"set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
