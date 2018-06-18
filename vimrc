@@ -15,7 +15,8 @@ set laststatus=2 "Set the statusbar so it always displays
 set backspace=2 "Sane backspace behaviour
 
 "Add a manual command to re-run ctags
-nnoremap <f5> :!ctags -R<CR>
+nnoremap <f5> :!ctags -R -f /.tags<CR>
+nnoremap <C-F5> :!ctags -R --fields=+l --languages=python --python-kinds=-iv -f .tags ./<CR>
 
 "Map ctrl+dir keys to move between splits
 nnoremap <C-J> <C-W><C-J>
@@ -45,3 +46,12 @@ set guioptions-=T
 set guioptions-=e
 
 "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
+
+"From comments here (http://vim.wikia.com/wiki/Project_specific_settings)
+"Setup a .vimlocal for local project settings
+silent! so .vimlocal
+
+"Automatically save the session into the default name. Restore from the
+"default name
+autocmd VimLeave * mksession! 
+silent! so Session.vim
