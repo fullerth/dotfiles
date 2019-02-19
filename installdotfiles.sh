@@ -11,7 +11,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
-files="vimrc vim tmux.conf"    
+files="vimrc vim tmux.conf gitignore_global"    
 # list of files/folders to symlink in ~/.config
 config_files="xfce4 i3"
 ##########
@@ -41,3 +41,8 @@ for file in $config_files; do
     echo "Creating symlink to $file in ~/.config directory."
     ln -s $dir/$file ~/.config/$file
 done
+
+# Install the global gitignore. This could be cleaner, and will fail silently 
+# if git is not already installed
+echo "Running git config --global core.excludesfile ~/.gitignore_global"
+git config --global core.excludesfile ~/.gitignore_global

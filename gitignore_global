@@ -1,0 +1,4 @@
+# This is the global ignore file for git on this install
+
+# Vim artifacts
+Session.vim
