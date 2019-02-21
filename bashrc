@@ -56,6 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+source /usr/share/git-core/contrib/completion/git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1)\[\033[00m\]\$ '
 else
@@ -112,7 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/srv/crosstool-ng/bin:/usr/local/xtools/arm-beagle-linux-gnueabi/bin
 if [ "$TERM" == "xterm" ]; then
     # No it isn't, it's gnome-terminal
     export TERM=xterm-256color
