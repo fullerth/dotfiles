@@ -40,10 +40,11 @@ autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
 colorscheme apprentice
 
-"Remove toolbar, menubar and tabbar from gvim
+"Remove toolbar, menubar, tabbar and scrollbar from gvim
 set guioptions-=m
 set guioptions-=T 
 set guioptions-=e
+set guioptions-=r
 
 "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
 
@@ -51,7 +52,7 @@ set guioptions-=e
 "Setup a .vimlocal for local project settings
 silent! so .vimlocal
 
-"Automatically save the session into the default name. Restore from the
+"Automatically save the session into the default name. Do not restore from the
 "default name
 autocmd VimLeave * mksession! 
-silent! so Session.vim
+"silent! so Session.vim
