@@ -1,0 +1,8 @@
+# Drop this file into ~/.local/share/applications and modify it so
+# Exec points to the correct location
+[Desktop Entry]
+Name=Saleae Logic
+Path=/home/tfuller/Tools/Logic
+Exec=Logic
+Type=Application
+
