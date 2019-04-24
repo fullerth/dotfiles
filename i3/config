@@ -170,14 +170,28 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#Mode for changing display settings.
+#Use ARANDR application to generate and save the scripts 
+set $displayMode "Set display mode [w]ork [l]aptop"
+bindsym $mod+x mode $displayMode
+mode $displayMode {
+    bindsym w exec "\
+       ~/.config/i3/scripts/CoreScientific-Layout.sh"; \
+    mode "default" 
+    bindsym l exec "\
+       ~/.config/i3/scripts/LaptopOnly-Layout.sh"; \
+    mode "default"
+}
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
 }
 
-# Startup slack
+# Startup applications here
 exec slack
+exec ~/Tools/Telegram/Telegram
 
 # Lock 
 bindsym Control+$mod+l exec --no-startup-id i3lock
