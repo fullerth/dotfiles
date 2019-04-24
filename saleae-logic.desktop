@@ -5,4 +5,5 @@ Name=Saleae Logic
 Path=/home/tfuller/Tools/Logic
 Exec=Logic
 Type=Application
+Terminal=true
 
