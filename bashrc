@@ -118,3 +118,16 @@ if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 export EDITOR=vim
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Check if a script named .local_credentials.sh exists and source it
+LOCAL_CREDENTIALS=~/.local_credentials.sh
+if test -f "$LOCAL_CREDENTIALS"; then
+    . "$LOCAL_CREDENTIALS"
+fi
+
+# Configure vi-mode for bash
+set -o vi
+
