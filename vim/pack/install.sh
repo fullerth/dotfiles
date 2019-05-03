@@ -56,6 +56,8 @@ package git@github.com:tpope/vim-unimpaired.git &
 # Automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
 #package https://github.com/tpope/vim-sleuth.git &
 # package https://github.com/tpope/vim-vinegar.git &
+package git@github.com:vim-airline/vim-airline.git 
+package git@github.com:majutsushi/tagbar.git 
 wait
 ) &
 
