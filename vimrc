@@ -45,6 +45,8 @@ set guioptions-=m
 set guioptions-=T 
 set guioptions-=e
 set guioptions-=r
+set guioptions-=l
+set guioptions-=L
 
 "set guifont=DejaVu_Sans_Mono:h9:cANSI:qDRAFT
 
