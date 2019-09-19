@@ -5,7 +5,7 @@ filetype plugin indent on
 "Editor Display Setup
 let base16colorspace=256  " Access colors present in 256 colorspace
 set nu
-set colorcolumn=80
+set colorcolumn=120
 set tabstop=4
 set shiftwidth=4
 set expandtab
