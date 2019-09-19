@@ -69,6 +69,13 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Move the current workspace to left/right
+bindsym $mod+Shift+Control+h move workspace to output left
+bindsym $mod+Shift+Control+j move workspace to output down
+bindsym $mod+Shift+Control+k move workspace to output up
+bindsym $mod+Shift+Control+l move workspace to output right
+
+
 # split in horizontal orientation
 bindsym $mod+c split h
 
@@ -151,16 +158,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 2 px or 2 ppt
+        bindsym j resize grow height 2 px or 2 ppt
+        bindsym k resize shrink height 2 px or 2 ppt
+        bindsym l resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -172,7 +179,7 @@ bindsym $mod+r mode "resize"
 
 #Mode for changing display settings.
 #Use ARANDR application to generate and save the scripts 
-set $displayMode "Set display mode [w]ork [l]aptop"
+set $displayMode "Set display mode [w]ork [l]aptop [d]alton"
 bindsym $mod+x mode $displayMode
 mode $displayMode {
     bindsym w exec "\
@@ -180,6 +187,9 @@ mode $displayMode {
     mode "default" 
     bindsym l exec "\
        ~/.config/i3/scripts/LaptopOnly-Layout.sh"; \
+    mode "default"
+    bindsym d exec "\
+       ~/.config/i3/scripts/Dalton-TeamCollabStation.sh; \
     mode "default"
 }
 
@@ -192,6 +202,7 @@ bar {
 # Startup applications here
 exec slack
 exec ~/Tools/Telegram/Telegram
+exec ~/Applications/MicrosoftTeams/MicrosoftTeams
 
 # Lock 
 bindsym Control+$mod+l exec --no-startup-id i3lock
