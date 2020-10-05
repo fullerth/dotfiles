@@ -38,7 +38,8 @@ set foldlevel=99
 "Setup syntax for arduino .ino files
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
-colorscheme apprentice
+set background=dark
+colorscheme gruvbox
 
 "Remove toolbar, menubar, tabbar and scrollbar from gvim
 set guioptions-=m
