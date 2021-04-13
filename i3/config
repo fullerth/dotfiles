@@ -179,7 +179,7 @@ bindsym $mod+r mode "resize"
 
 #Mode for changing display settings.
 #Use ARANDR application to generate and save the scripts 
-set $displayMode "Set display mode [w]ork [l]aptop [d]alton"
+set $displayMode "Set display mode [w]ork [l]aptop [d]alton larry-[o]ffice [h]ome-office"
 bindsym $mod+x mode $displayMode
 mode $displayMode {
     bindsym w exec "\
@@ -189,8 +189,15 @@ mode $displayMode {
        ~/.config/i3/scripts/LaptopOnly-Layout.sh"; \
     mode "default"
     bindsym d exec "\
-       ~/.config/i3/scripts/Dalton-TeamCollabStation.sh; \
+       ~/.config/i3/scripts/Dalton-TeamCollabStation.sh"; \
     mode "default"
+    bindsym o exec "\
+       ~/.config/i3/scripts/LarryOffice-Layout.sh"; \
+    mode "default"
+    bindsym h exec "\
+       ~/.config/i3/scripts/HighDPI-LaptopRight-Home.sh"; \
+    mode "default"
+
 }
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -202,10 +209,10 @@ bar {
 # Startup applications here
 exec slack
 exec ~/Tools/Telegram/Telegram
-exec ~/Applications/MicrosoftTeams/MicrosoftTeams
+exec /usr/bin/teams
 
 # Lock 
-bindsym Control+$mod+l exec --no-startup-id i3lock
+bindsym Control+$mod+l exec --no-startup-id i3lock --color=000000
 
 # Disable mouse warping
 mouse_warping none
