@@ -23,6 +23,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" Need to add these mappings to to termdebug as well
 
 "Map <CR> to clear search highlighting
 nnoremap <CR> :noh<CR><CR>
@@ -59,3 +60,10 @@ silent! so .vimlocal
 "default name
 autocmd VimLeave * mksession! 
 "silent! so Session.vim
+
+"Setup the terminal debugger
+" Use a .vimlocal to set `g:termdebugger` for cross-debugging purposes
+packadd termdebug
+"let g:termdebug_wide=1
+" Add mapping to move to the program window and close it with <ctrl-\>c.
+tnoremap <c-\>c <c-\><c-n>:Program<cr><c-w>:q!<cr>:Gdb<cr>i
