@@ -208,8 +208,6 @@ bar {
 
 # Startup applications here
 exec slack
-exec ~/Tools/Telegram/Telegram
-exec /usr/bin/teams
 
 # Lock 
 bindsym Control+$mod+l exec --no-startup-id i3lock --color=000000
