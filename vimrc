@@ -1,4 +1,3 @@
-
 syntax on
 filetype plugin indent on
 
@@ -27,6 +26,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+tnoremap <C-J> <C-W><C-J>
+tnoremap <C-K> <C-W><C-K>
+tnoremap <C-L> <C-W><C-L>
+tnoremap <C-H> <C-W><C-H>
 
 "Map <CR> to clear search highlighting
 nnoremap <CR> :noh<CR><CR>
@@ -42,6 +45,7 @@ set foldlevel=99
 "Setup syntax for arduino .ino files
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
+set background=dark
 colorscheme apprentice
 
 "Remove toolbar, menubar, tabbar and scrollbar from gvim
@@ -61,4 +65,23 @@ silent! so .vimlocal
 "Automatically save the session into the default name. Do not restore from the
 "default name
 autocmd VimLeave * mksession! 
+" This unfortunately breaks git commit windows. Till I figure out a way to
+" filter those out, disabling sourcing the Session of the directory we
+" launched from
 "silent! so Session.vim
+
+"Setup the terminal debugger
+" Use a .vimlocal to set `g:termdebugger` for cross-debugging purposes
+packadd termdebug
+"let g:termdebug_wide=1
+" Add mapping to move to the program window and close it with <ctrl-\>c.
+tnoremap <c-\>c <c-\><c-n>:Program<cr><c-w>:q!<cr>:Gdb<cr>i
+" Need to figure out how to handle moving between tabs from terminals
+
+tnoremap <Leader>P <c-\><c-n>:Gdb<cr>i<cr>load<cr>
+
+"Setup netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+nnoremap <Leader>dd :18Lexplore %:p:h<CR>
+nnoremap <Leader>da :18Lexplore<CR>
