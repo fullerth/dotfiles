@@ -13,6 +13,10 @@ set incsearch
 set laststatus=2 "Set the statusbar so it always displays
 set backspace=2 "Sane backspace behaviour
 
+"Persist Undo beyond sessions
+set undofile
+set undodir=~/.vim/undodir
+
 "Add a manual command to re-run ctags
 nnoremap <f5> :!ctags -R -f /.tags<CR>
 nnoremap <C-F5> :!ctags -R --fields=+l --languages=python --python-kinds=-iv -f .tags ./<CR>
@@ -42,7 +46,7 @@ set foldlevel=99
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
 set background=dark
-colorscheme gruvbox
+colorscheme apprentice
 
 "Remove toolbar, menubar, tabbar and scrollbar from gvim
 set guioptions-=m
