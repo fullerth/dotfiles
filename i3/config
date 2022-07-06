@@ -2,7 +2,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Mod1
+#set $mod Mod4
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -275,6 +276,9 @@ mode "resize" {
 	bindsym $mod+r mode "default"
 }
 
+# Cancelable Autoclicker
+bindsym $mod+Shift+Ctrl+c exec "bash -c 'killall xdotool || while xdotool click --repeat 5000000 --delay 80 1; do :; done'"
+
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
 
@@ -290,7 +294,8 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+# Currently disabling autolock since it breaks lots of VPN and sound stuff
+exec --no-startup-id xautolock -time 60 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
