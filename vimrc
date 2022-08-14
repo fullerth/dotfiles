@@ -46,7 +46,7 @@ set foldlevel=99
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 
 set background=dark
-colorscheme apprentice
+colorscheme gruvbox
 
 "Remove toolbar, menubar, tabbar and scrollbar from gvim
 set guioptions-=m
@@ -73,15 +73,21 @@ autocmd VimLeave * mksession!
 "Setup the terminal debugger
 " Use a .vimlocal to set `g:termdebugger` for cross-debugging purposes
 packadd termdebug
-"let g:termdebug_wide=1
+" Prefer to use the termdebug_config dictionary, but it doesn't seem to work
+"set g:termdebug_config['wide']=1
+let g:termdebug_wide=1
 " Add mapping to move to the program window and close it with <ctrl-\>c.
 tnoremap <c-\>c <c-\><c-n>:Program<cr><c-w>:q!<cr>:Gdb<cr>i
 " Need to figure out how to handle moving between tabs from terminals
 
-tnoremap <Leader>P <c-\><c-n>:Gdb<cr>i<cr>load<cr>
+tnoremap <Leader>P <c-\><c-n>:Gdb<cr>i<cr><c-C>load<cr>
+
+" For some reason defaults are getting cleared
+hi debugPC term=reverse ctermbg=darkblue guibg=darkblue
+hi debugBreakpoint term=reverse ctermbg=red guibg=red
 
 "Setup netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-nnoremap <Leader>dd :18Lexplore %:p:h<CR>
-nnoremap <Leader>da :18Lexplore<CR>
+nnoremap <Leader>dd :15Lexplore %:p:h<CR>
+nnoremap <Leader>da :15Lexplore<CR>
