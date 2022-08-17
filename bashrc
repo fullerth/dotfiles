@@ -132,4 +132,10 @@ fi
 # Configure vi-mode for bash
 set -o vi
 
+# Set aliases for Switching mod key in i3
+# Aliases naievely assume that you only use Alt or Super
+alias sms='~/.config/i3/scripts/set-mod-super.sh;i3 reload'
+alias sma='~/.config/i3/scripts/set-mod-alt.sh;i3 reload'
+
+
 
