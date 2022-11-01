@@ -91,3 +91,8 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 nnoremap <Leader>dd :15Lexplore %:p:h<CR>
 nnoremap <Leader>da :15Lexplore<CR>
+
+"Set grep to ignore tags file
+let &grepprg="grep --exclude=tags -n $* /dev/null"
+
+au BufRead,BufNewFile *.vimlocal set filetype=vim
