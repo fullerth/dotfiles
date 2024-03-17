@@ -13,7 +13,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 files="vimrc vim tmux.conf gitignore_global bashrc"    
 # list of files/folders to symlink in ~/.config
-config_files="xfce4 i3"
+config_files="sway"
 ##########
 
 # create dotfiles_old in homedir
