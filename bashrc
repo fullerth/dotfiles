@@ -138,4 +138,5 @@ alias sms='~/.config/i3/scripts/set-mod-super.sh;i3 reload'
 alias sma='~/.config/i3/scripts/set-mod-alt.sh;i3 reload'
 
 
+complete -cf sudo
 
