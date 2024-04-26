@@ -1,0 +1,48 @@
+daemonize
+#show-keyboard-layout
+ignore-empty-password
+indicator-caps-lock
+image=$XDG_CONFIG_HOME/swaylock/Turntable-1200-above.jpg
+scaling=fit
+
+# Line just between tracks
+indicator-radius=286
+indicator-thickness=3
+indicator-x-position=741
+indicator-y-position=532
+
+font=SuperFunky
+font-size=96
+#font=etna
+#font=Ailerons
+
+# Caps Lock
+caps-lock-bs-hl-color=878787
+caps-lock-key-hl-color=71797e
+inside-caps-lock-color=87878760
+#ring-caps-lock-color=71797e
+text-caps-lock-color=000000
+
+# Verify
+#ring-ver-color=
+inside-ver-color=7393b380
+
+# Wrong
+inside-wrong-color=80000050
+
+# Backspace`
+bs-hl-color=C0C0C0
+
+# Clear
+ring-clear-color=C0C0C040
+line-clear-color=C0C0C0
+inside-clear-color=C0C0C040
+
+# Typing
+inside-color=ffffff00
+ring-color=00000000
+separator-color=00000000
+line-uses-inside
+
+
+indicator-idle-visible

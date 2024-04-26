@@ -247,3 +247,6 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec bemenu-run
 
 include /etc/sway/config.d/*
+
+## Autostart polkit agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
