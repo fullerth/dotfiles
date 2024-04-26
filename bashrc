@@ -140,3 +140,4 @@ alias sma='~/.config/i3/scripts/set-mod-alt.sh;i3 reload'
 
 complete -cf sudo
 
+eval "$(oh-my-posh init bash)"
