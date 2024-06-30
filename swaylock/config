@@ -1,8 +1,9 @@
 daemonize
 #show-keyboard-layout
-ignore-empty-password
+#ignore-empty-password
 indicator-caps-lock
-image=$XDG_CONFIG_HOME/swaylock/Turntable-1200-above.jpg
+#image=$XDG_CONFIG_HOME/swaylock/Turntable-1200-above.jpg
+image=$XDG_CONFIG_HOME/swaylock/Turntable-1200-above-black-background.jpg
 scaling=fit
 
 # Line just between tracks
@@ -11,10 +12,12 @@ indicator-thickness=3
 indicator-x-position=741
 indicator-y-position=532
 
-font=SuperFunky
-font-size=96
+#font=SuperFunky
+#font-size=96
 #font=etna
-#font=Ailerons
+font=Ailerons
+#font=aqua
+#font=trade-gothic
 
 # Caps Lock
 caps-lock-bs-hl-color=878787
@@ -43,6 +46,9 @@ inside-color=ffffff00
 ring-color=00000000
 separator-color=00000000
 line-uses-inside
+
+# Background
+color=FFFFFF00
 
 
 indicator-idle-visible

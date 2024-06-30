@@ -18,7 +18,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu wofi --show=drun --lines=5 --prompt="> "
+set $menu wofi --show=drun --lines=5 --prompt="¯\_(ツ)_/¯ "
 
 ### Output configuration
 #
@@ -37,9 +37,9 @@ output * bg /home/pthrill/APOD/STSCI-MarsPhobosComp3000.jpg fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
+          timeout 300 'loginctl lock-session && swaylock' \
           timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep 'loginctl lock-session && swaylock'
 
 ### Input configuration
 #
@@ -78,8 +78,11 @@ output * bg /home/pthrill/APOD/STSCI-MarsPhobosComp3000.jpg fill
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # Show wlogout
+    bindsym $mod+Shift+e exec wlogout
+
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+Control+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
