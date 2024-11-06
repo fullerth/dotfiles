@@ -96,3 +96,9 @@ nnoremap <Leader>da :15Lexplore<CR>
 let &grepprg="grep --exclude=tags -n $* /dev/null"
 
 au BufRead,BufNewFile *.vimlocal set filetype=vim
+
+"Completion remappings
+inoremap ^] ^X^]
+inoremap ^F ^X^F
+inoremap ^D ^X^D
+inoremap ^L ^X^L
