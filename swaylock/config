@@ -7,10 +7,13 @@ image=$XDG_CONFIG_HOME/swaylock/Turntable-1200-above-black-background.jpg
 scaling=fit
 
 # Line just between tracks
-indicator-radius=286
-indicator-thickness=3
-indicator-x-position=741
-indicator-y-position=532
+#indicator-radius=286
+indicator-radius=160
+indicator-thickness=4
+#indicator-x-position=878
+indicator-x-position=880
+#indicator-y-position=624
+indicator-y-position=631
 
 #font=SuperFunky
 #font-size=96
@@ -27,8 +30,8 @@ inside-caps-lock-color=87878760
 text-caps-lock-color=000000
 
 # Verify
-#ring-ver-color=
-inside-ver-color=7393b380
+ring-ver-color=cdc6efff
+inside-ver-color=cdc6ef00
 
 # Wrong
 inside-wrong-color=80000050
@@ -42,6 +45,7 @@ line-clear-color=C0C0C0
 inside-clear-color=C0C0C040
 
 # Typing
+key-hl-color=cdc6efff
 inside-color=ffffff00
 ring-color=00000000
 separator-color=00000000
